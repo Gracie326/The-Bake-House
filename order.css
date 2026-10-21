@@ -1,0 +1,596 @@
+/* =================================
+   BAKE HOUSE — LUXURY ORDER PAGE
+================================= */
+
+.order-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 78px 6% 65px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 12% 15%, rgba(255,255,255,.75), transparent 35%),
+        linear-gradient(135deg, #f1e4d7, #faf5ef 65%, #ead8c7);
+}
+
+.order-hero::before,
+.order-hero::after {
+    position: absolute;
+    color: rgba(183, 122, 80, .18);
+    font-family: Georgia, serif;
+    pointer-events: none;
+}
+
+.order-hero::before {
+    content: "✳";
+    top: 18px;
+    left: 9%;
+    font-size: 4rem;
+    animation: floatDecor 6s ease-in-out infinite;
+}
+
+.order-hero::after {
+    content: "✧";
+    right: 10%;
+    bottom: 15px;
+    font-size: 5rem;
+    animation: floatDecor 7s ease-in-out infinite reverse;
+}
+
+.order-eyebrow {
+    margin: 0 0 15px;
+    color: #986745;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.7;
+}
+
+.order-hero h1 {
+    margin: 0 auto 18px;
+    color: #302019;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5.5vw, 4.3rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.order-hero h1 em {
+    color: #a16e4b;
+    font-weight: 400;
+}
+
+.order-hero > p:not(.order-eyebrow) {
+    max-width: 610px;
+    margin: 0 auto;
+    color: #68564b;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.order-hero-note {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 25px;
+    color: #705849;
+    font-size: .8rem;
+    letter-spacing: .5px;
+}
+
+.hero-dot {
+    color: #b77a50;
+}
+
+/* MAIN LAYOUT */
+
+.order-section {
+    padding: 75px 6%;
+    background:
+        radial-gradient(ellipse at 95% 15%, rgba(233,217,203,.28), transparent 32%),
+        #faf7f2;
+}
+
+.order-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: 55px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* LEFT INTRODUCTION */
+
+.order-side-note {
+    position: sticky;
+    top: 30px;
+    padding: 28px 4px;
+    animation: riseIn .7s ease both;
+}
+
+.order-side-note h2 {
+    max-width: 390px;
+    margin: 0 0 20px;
+    color: #302019;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.3rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.order-side-note > p:not(.order-eyebrow) {
+    color: #756359;
+    line-height: 1.9;
+}
+
+.order-side-divider {
+    width: 65px;
+    height: 1px;
+    margin: 32px 0;
+    background: #b77a50;
+}
+
+.side-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin: 25px 0;
+}
+
+.side-number {
+    display: flex;
+    flex: 0 0 37px;
+    width: 37px;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9c1ad;
+    border-radius: 50%;
+    color: #986745;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: .9rem;
+}
+
+.side-detail strong,
+.side-detail small {
+    display: block;
+}
+
+.side-detail strong {
+    margin: 1px 0 7px;
+    color: #493328;
+    font-size: .93rem;
+}
+
+.side-detail small {
+    color: #827168;
+    font-size: .84rem;
+    line-height: 1.7;
+}
+
+/* FORM CARD */
+
+.order-form-card {
+    min-width: 0;
+    padding: clamp(24px, 4vw, 44px);
+    border: 1px solid rgba(218, 202, 187, .75);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 22px 65px rgba(74, 48, 39, .07);
+    animation: riseIn .8s ease both;
+}
+
+.form-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-heading .order-eyebrow {
+    margin-bottom: 9px;
+}
+
+.form-heading h2 {
+    margin: 0;
+    color: #302019;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+}
+
+.form-flower {
+    color: #b77a50;
+    font-size: 2.6rem;
+    animation: slowTurn 18s linear infinite;
+}
+
+.form-description {
+    margin: 13px 0 32px;
+    color: #817168;
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+/* SECTION HEADINGS */
+
+.form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0 22px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #eee5dd;
+}
+
+.form-section-title > span {
+    color: #b77a50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: .9rem;
+}
+
+.form-section-title h3 {
+    margin: 0;
+    color: #493328;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.field-hint {
+    margin: -8px 0 20px;
+    color: #87786e;
+    font-size: .84rem;
+    line-height: 1.7;
+}
+
+/* INPUTS */
+
+.form-field {
+    margin-bottom: 23px;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 9px;
+    color: #493328;
+    font-size: .87rem;
+    font-weight: 600;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 15px 16px;
+    border: 1px solid #e5d9ce;
+    border-radius: 3px;
+    background: #fdfbf9;
+    color: #493328;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        transform .25s ease;
+}
+
+.order-form input::placeholder,
+.order-form textarea::placeholder {
+    color: #ad9f94;
+}
+
+.order-form input:hover,
+.order-form select:hover,
+.order-form textarea:hover {
+    border-color: #cbb29d;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: #b77a50;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(183, 122, 80, .1);
+    transform: translateY(-2px);
+}
+
+.order-form textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+.order-form select {
+    cursor: pointer;
+}
+
+/* MUFFIN QUANTITY CHOICES */
+
+.muffin-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid #eee5dd;
+}
+
+.muffin-choice-copy {
+    min-width: 0;
+}
+
+.muffin-choice-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #a77a59;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+.muffin-choice-copy label {
+    margin-bottom: 6px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.muffin-choice-copy p {
+    margin: 0;
+    color: #87786e;
+    font-size: .83rem;
+    line-height: 1.7;
+}
+
+.muffin-choice select {
+    flex: 0 0 125px;
+    width: 125px;
+    padding: 12px 8px;
+    font-size: .87rem;
+}
+
+/* DELIVERY ADDRESS */
+
+#address-group[hidden] {
+    display: none !important;
+}
+
+#address-group:not([hidden]) {
+    animation: riseIn .35s ease both;
+}
+
+/* PRICE NOTE */
+
+.price-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin: 27px 0;
+    padding: 17px;
+    border-left: 2px solid #b77a50;
+    background: #f8f1e9;
+}
+
+.price-notice > span {
+    color: #a16e4b;
+}
+
+.price-notice p {
+    margin: 0;
+    color: #705d50;
+    font-size: .82rem;
+    line-height: 1.8;
+}
+
+/* SUBMIT BUTTON */
+
+.order-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    padding: 18px 22px;
+    border: 1px solid #493328;
+    border-radius: 3px;
+    background: #493328;
+    color: #fffaf5;
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    cursor: pointer;
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+}
+
+.order-submit:hover {
+    transform: translateY(-3px);
+    border-color: #a16e4b;
+    background: #a16e4b;
+    box-shadow: 0 12px 25px rgba(74, 48, 39, .15);
+}
+
+.order-submit:active {
+    transform: translateY(-1px);
+}
+
+.order-submit:focus-visible {
+    outline: 3px solid #c99b78;
+    outline-offset: 4px;
+}
+
+.submit-arrow {
+    font-size: 1.3rem;
+    transition: transform .25s ease;
+}
+
+.order-submit:hover .submit-arrow {
+    transform: translate(3px, -3px);
+}
+
+.form-footer-note {
+    margin: 17px 0 0;
+    color: #92847a;
+    font-size: .78rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.form-error {
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    border-left: 3px solid #a34d3f;
+    background: #fff1ed;
+    color: #813a30;
+    font-size: .87rem;
+    line-height: 1.7;
+}
+
+/* ANIMATIONS */
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatDecor {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(8deg);
+    }
+}
+
+@keyframes slowTurn {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .order-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 720px;
+    }
+
+    .order-side-note {
+        position: static;
+        padding: 0 0 10px;
+    }
+
+    .order-side-note h2 {
+        max-width: 600px;
+    }
+
+    .order-side-divider {
+        margin: 23px 0;
+    }
+
+    .side-detail {
+        margin: 17px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .order-hero {
+        padding: 55px 5% 45px;
+    }
+
+    .order-hero h1 {
+        letter-spacing: -.7px;
+    }
+
+    .order-hero::before {
+        left: 3%;
+        font-size: 2.5rem;
+    }
+
+    .order-hero::after {
+        right: 3%;
+        font-size: 3rem;
+    }
+
+    .order-section {
+        padding: 42px 4%;
+    }
+
+    .order-form-card {
+        padding: 23px 17px;
+    }
+
+    .form-flower {
+        font-size: 2rem;
+    }
+
+    .muffin-choice {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .muffin-choice select {
+        flex-basis: 112px;
+        width: 112px;
+        padding: 12px 5px;
+    }
+
+    .muffin-choice-copy label {
+        font-size: 1.05rem;
+    }
+
+    .muffin-choice-copy p {
+        font-size: .78rem;
+    }
+}
+
+/* RESPECT REDUCED-MOTION PREFERENCES */
+
+@media (prefers-reduced-motion: reduce) {
+    .order-hero::before,
+    .order-hero::after,
+    .form-flower {
+        animation: none;
+    }
+
+    .order-form-card,
+    .order-side-note,
+    #address-group:not([hidden]) {
+        animation: none;
+    }
+
+    .order-form input,
+    .order-form select,
+    .order-form textarea,
+    .order-submit,
+    .submit-arrow {
+        transition: none;
+    }
+}

@@ -1,0 +1,217 @@
+/* ================================
+   BAKE HOUSE - CONTACT PAGE
+================================ */
+
+.contact-hero {
+    background: var(--light-brown);
+    padding: 70px 6%;
+    text-align: center;
+}
+
+.contact-eyebrow {
+    color: var(--caramel);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.contact-hero h1 {
+    color: var(--dark-brown);
+    font-size: clamp(2.4rem, 5vw, 3.7rem);
+    margin-bottom: 18px;
+}
+
+.contact-hero > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.contact-section {
+    padding: 75px 6%;
+    background: var(--cream);
+}
+
+.contact-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.contact-intro h2,
+.contact-message h2 {
+    color: var(--dark-brown);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 15px;
+}
+
+.contact-intro p,
+.contact-message-text > p:not(.contact-eyebrow) {
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 65px;
+}
+
+.contact-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+}
+
+.contact-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: var(--light-brown);
+    border-radius: 50%;
+    font-size: 1.8rem;
+}
+
+.contact-card h3 {
+    color: var(--brown);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: var(--caramel);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: var(--dark-brown);
+}
+
+.contact-message {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 35px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px;
+    background: var(--light-brown);
+    border-radius: var(--radius);
+}
+
+.contact-message-text h2 {
+    margin-bottom: 18px;
+}
+
+.contact-message-text > p:not(.contact-eyebrow) {
+    margin-bottom: 25px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background: var(--brown);
+    color: var(--white);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease,
+                transform 0.3s ease;
+}
+
+.contact-button:hover {
+    background: var(--caramel);
+    transform: translateY(-2px);
+}
+
+.contact-message-decoration {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    background: var(--cream);
+    border-radius: var(--radius);
+}
+
+.contact-message-decoration span {
+    color: var(--caramel);
+    font-size: 2.5rem;
+}
+
+.contact-message-decoration p {
+    max-width: 220px;
+    color: var(--brown);
+    font-size: 1.4rem;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 800px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .contact-message {
+        grid-template-columns: 1fr;
+        padding: 30px 24px;
+    }
+
+    .contact-message-decoration {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 50px 5%;
+    }
+
+    .contact-section {
+        padding: 45px 5%;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+    }
+
+    .contact-message {
+        padding: 25px 18px;
+    }
+
+    .contact-button {
+        width: 100%;
+        text-align: center;
+    }
+}

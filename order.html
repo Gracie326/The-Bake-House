@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Place an Order | Bake House</title>
+
+    <meta name="description"
+          content="Order banana oat and chocolate muffins from Bake House in Spintex, Accra. Choose delivery or pickup.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <a href="index.html" class="logo">Bake <span>House.</span></a>
+
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-nav">☰</button>
+
+        <nav class="main-nav" id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="muffins.html">Our Muffins</a>
+            <a href="order.html" class="nav-order active">Order Now</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INTRODUCTION -->
+        <section class="order-hero">
+            <p class="order-eyebrow">BAKE HOUSE · MADE WITH CARE</p>
+
+            <h1>A little sweetness, <em>on its way.</em></h1>
+
+            <p>
+                Choose your favourites, tell us how you'd like to receive
+                them, and send your order to us on WhatsApp.
+            </p>
+
+            <div class="order-hero-note">
+                <span>Thoughtfully made</span>
+                <span class="hero-dot">✦</span>
+                <span>Available in Spintex</span>
+            </div>
+        </section>
+
+        <!-- ORDER FORM -->
+        <section class="order-section">
+
+            <div class="order-layout">
+
+                <aside class="order-side-note">
+                    <p class="order-eyebrow">YOUR MUFFIN MOMENT</p>
+
+                    <h2>Good things are worth waiting for.</h2>
+
+                    <p>
+                        Whether you're in the mood for banana oat or
+                        chocolate, we're here to make your treat special.
+                    </p>
+
+                    <div class="order-side-divider"></div>
+
+                    <p class="side-detail">
+                        <span class="side-number">01</span>
+                        <span>
+                            <strong>Choose your muffins</strong>
+                            <small>Pick the flavours and quantities you love.</small>
+                        </span>
+                    </p>
+
+                    <p class="side-detail">
+                        <span class="side-number">02</span>
+                        <span>
+                            <strong>Tell us the details</strong>
+                            <small>Let us know your contact and delivery preference.</small>
+                        </span>
+                    </p>
+
+                    <p class="side-detail">
+                        <span class="side-number">03</span>
+                        <span>
+                            <strong>Send via WhatsApp</strong>
+                            <small>We'll confirm availability and pricing with you.</small>
+                        </span>
+                    </p>
+                </aside>
+
+                <div class="order-form-card">
+                    <div class="form-heading">
+                        <div>
+                            <p class="order-eyebrow">LET'S GET STARTED</p>
+                            <h2>Your order details</h2>
+                        </div>
+                        <span class="form-flower" aria-hidden="true">✳</span>
+                    </div>
+
+                    <p class="form-description">
+                        Fill in the details below. Fields marked with *
+                        are required.
+                    </p>
+
+                    <form class="order-form" id="order-form">
+
+                        <div class="form-section-title">
+                            <span>01</span>
+                            <h3>About you</h3>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="customer-name">Your full name *</label>
+                            <input
+                                type="text"
+                                id="customer-name"
+                                name="customerName"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                                required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="customer-phone">Your phone number *</label>
+                            <input
+                                type="tel"
+                                id="customer-phone"
+                                name="customerPhone"
+                                placeholder="e.g. 024 123 4567"
+                                autocomplete="tel"
+                                required>
+                        </div>
+
+                        <div class="form-section-title">
+                            <span>02</span>
+                            <h3>Your muffin selection</h3>
+                        </div>
+
+                        <p class="field-hint">
+                            Choose a quantity for each flavour. You can leave
+                            a flavour at zero.
+                        </p>
+
+                        <div class="muffin-choice">
+                            <div class="muffin-choice-copy">
+                                <span class="muffin-choice-label">01 · CLASSIC FAVOURITE</span>
+                                <label for="banana-quantity">Banana Oat Muffins</label>
+                                <p>Comforting, wholesome and delicious.</p>
+                            </div>
+
+                            <select id="banana-quantity"
+                                    name="bananaQuantity"
+                                    aria-label="Quantity of banana oat muffins">
+                                <option value="0">0 muffins</option>
+                                <option value="1">1 muffin</option>
+                                <option value="2">2 muffins</option>
+                                <option value="3">3 muffins</option>
+                                <option value="4">4 muffins</option>
+                                <option value="5">5 muffins</option>
+                                <option value="6">6 muffins</option>
+                                <option value="7">7 muffins</option>
+                                <option value="8">8 muffins</option>
+                                <option value="9">9 muffins</option>
+                                <option value="10">10 muffins</option>
+                            </select>
+                        </div>
+
+                        <div class="muffin-choice">
+                            <div class="muffin-choice-copy">
+                                <span class="muffin-choice-label">02 · CHOCOLATE LOVE</span>
+                                <label for="chocolate-quantity">Chocolate Muffins</label>
+                                <p>A rich treat for chocolate lovers.</p>
+                            </div>
+
+                            <select id="chocolate-quantity"
+                                    name="chocolateQuantity"
+                                    aria-label="Quantity of chocolate muffins">
+                                <option value="0">0 muffins</option>
+                                <option value="1">1 muffin</option>
+                                <option value="2">2 muffins</option>
+                                <option value="3">3 muffins</option>
+                                <option value="4">4 muffins</option>
+                                <option value="5">5 muffins</option>
+                                <option value="6">6 muffins</option>
+                                <option value="7">7 muffins</option>
+                                <option value="8">8 muffins</option>
+                                <option value="9">9 muffins</option>
+                                <option value="10">10 muffins</option>
+                            </select>
+                        </div>
+
+                        <div class="form-section-title">
+                            <span>03</span>
+                            <h3>Delivery or pickup</h3>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="fulfilment">How would you like your order? *</label>
+                            <select id="fulfilment"
+                                    name="fulfilment"
+                                    required>
+                                <option value="">Choose an option</option>
+                                <option value="Pickup in Spintex">Pickup in Spintex</option>
+                                <option value="Delivery">Delivery</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field" id="address-group" hidden>
+                            <label for="delivery-address">Delivery address *</label>
+                            <textarea
+                                id="delivery-address"
+                                name="deliveryAddress"
+                                rows="3"
+                                placeholder="Enter your area, street or a nearby landmark"></textarea>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="preferred-date">Preferred date</label>
+                            <input
+                                type="date"
+                                id="preferred-date"
+                                name="preferredDate">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="order-notes">Additional notes</label>
+                            <textarea
+                                id="order-notes"
+                                name="orderNotes"
+                                rows="3"
+                                placeholder="Any special requests? (Optional)"></textarea>
+                        </div>
+
+                        <div class="price-notice">
+                            <span aria-hidden="true">✦</span>
+                            <p>
+                                Our prices are being finalised. We'll confirm
+                                the price, availability and any delivery fee
+                                with you on WhatsApp before your order is confirmed.
+                            </p>
+                        </div>
+
+                        <p class="form-error" id="form-error" role="alert" hidden></p>
+
+                        <button type="submit" class="order-submit">
+                            <span>Continue to WhatsApp</span>
+                            <span class="submit-arrow" aria-hidden="true">↗</span>
+                        </button>
+
+                        <p class="form-footer-note">
+                            Your order message will be prepared in WhatsApp.
+                            You'll review it and tap Send to submit it.
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Bake House. Made with love.</p>
+        <p>Spintex, Accra, Ghana</p>
+    </footer>
+
+</body>
+</html>

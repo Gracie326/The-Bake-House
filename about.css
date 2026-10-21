@@ -1,0 +1,317 @@
+/* BAKE HOUSE - ABOUT PAGE */
+
+.about-hero {
+    padding: 100px 7% 110px;
+    text-align: center;
+    background: linear-gradient(135deg, #faf7f2, #efe0d2);
+}
+
+.about-eyebrow {
+    margin-bottom: 18px;
+    color: #a16b4c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    margin-bottom: 24px;
+    color: #422a24;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.12;
+}
+
+.about-intro {
+    max-width: 580px;
+    margin: 0 auto 30px;
+    color: #75645b;
+    line-height: 1.9;
+}
+
+.about-story {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 65px;
+    padding: 100px 8%;
+    background: #fffdf9;
+}
+
+.story-text h2,
+.ingredients-section h2,
+.promise-section h2 {
+    margin-bottom: 22px;
+    color: #422a24;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+}
+
+.story-text p:not(.about-eyebrow) {
+    margin-bottom: 18px;
+    color: #75645b;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.story-note {
+    padding: 40px 32px;
+    background: #f5eee7;
+    border: 1px solid #eadfd4;
+    border-radius: 22px;
+}
+
+.note-symbol {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #b77a50;
+    font-size: 42px;
+}
+
+.story-note h3 {
+    margin-bottom: 14px;
+    color: #422a24;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.story-note p {
+    color: #75645b;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.ingredients-section {
+    padding: 95px 7%;
+    text-align: center;
+    background: #f5eee7;
+}
+
+.ingredients-section h2 {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ingredients-intro {
+    margin-bottom: 45px;
+    color: #75645b;
+}
+
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.ingredient-card {
+    padding: 32px 28px;
+    background: #fffdf9;
+    border: 1px solid #eadfd4;
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingredient-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(66, 42, 36, 0.08);
+}
+
+.ingredient-number {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #b77a50;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ingredient-card h3 {
+    margin-bottom: 14px;
+    color: #422a24;
+    font-size: 25px;
+}
+
+.ingredient-card p {
+    color: #75645b;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.ingredient-note {
+    max-width: 800px;
+    margin: 30px auto 0;
+    color: #8a7b72;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.promise-section {
+    padding: 95px 7%;
+    text-align: center;
+    background: #422a24;
+}
+
+.promise-section .about-eyebrow {
+    color: #d9a77e;
+}
+
+.promise-section h2 {
+    color: #fffaf5;
+}
+
+.promise-section > p:not(.about-eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #eadbd0;
+    line-height: 1.9;
+}
+
+.promise-section .btn-primary {
+    color: #422a24;
+    background: #fffaf5;
+}
+
+.promise-section .btn-primary:hover {
+    color: #fffaf5;
+    background: #b77a50;
+}
+
+@media (max-width: 800px) {
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 70px 6%;
+    }
+
+    .ingredient-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .about-hero,
+    .ingredients-section,
+    .promise-section {
+        padding: 75px 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 40px;
+    }
+
+    .story-note,
+    .ingredient-card {
+        padding: 26px 22px;
+    }
+}
+
+/* FIX ABOUT PAGE HEADER */
+
+.site-header .header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 90px;
+}
+
+.site-header .site-logo {
+    flex-shrink: 0;
+    font-size: 36px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.site-header .main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    margin-left: auto;
+}
+
+@media (max-width: 850px) {
+    .site-header .header-container {
+        flex-wrap: wrap;
+    }
+
+    .site-header .main-nav {
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        margin-left: 0;
+    }
+}
+/* ========================================
+   HEADER FIX — ALL PAGES
+======================================== */
+
+.site-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.site-header .logo,
+.site-header .site-logo {
+    display: inline-block;
+    color: var(--brown);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.site-header .logo span,
+.site-header .site-logo span {
+    color: var(--caramel);
+}
+
+.site-header .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 24px;
+    margin-left: auto;
+}
+
+/* Keep the mobile navigation working */
+@media (max-width: 820px) {
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .site-header .main-nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-left: 0;
+    }
+
+    .site-header .main-nav.open {
+        display: flex;
+    }
+
+    .site-header .logo,
+    .site-header .site-logo {
+        font-size: 1.8rem;
+    }
+}
+/* Keep About page navigation on the right */
+.site-header .main-nav {
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+}

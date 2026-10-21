@@ -1,0 +1,289 @@
+/* ========================================
+   BAKE HOUSE — OUR MUFFINS PAGE
+======================================== */
+
+/* PAGE INTRO */
+
+.muffins-hero {
+    padding: 75px 6% 85px;
+    text-align: center;
+    background: linear-gradient(135deg, #f5e9dc, #fffaf5);
+}
+
+.muffins-hero .eyebrow {
+    margin-bottom: 20px;
+}
+
+.muffins-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.muffins-hero h1 span {
+    color: var(--caramel);
+    font-style: italic;
+}
+
+.muffins-hero > p:last-child {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.04rem;
+    line-height: 1.9;
+}
+
+/* MUFFIN COLLECTION */
+
+.muffin-collection {
+    padding: 85px 6% 100px;
+}
+
+.muffins-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.muffins-heading h2 {
+    margin-bottom: 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+}
+
+.muffins-heading > p:last-child {
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+/* PRODUCT GRID */
+
+.muffins-products {
+    width: min(1050px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    align-items: start;
+}
+
+/* PRODUCT CARDS */
+
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba(74, 48, 39, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(74, 48, 39, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(74, 48, 39, 0.11);
+}
+
+.product-image {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    background: #eee0d2;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-tag {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    max-width: calc(100% - 36px);
+    padding: 9px 13px;
+    border-radius: 4px;
+    background: rgba(255, 250, 245, 0.95);
+    color: var(--brown);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.product-details {
+    padding: 28px;
+}
+
+.product-category {
+    margin-bottom: 10px;
+    color: var(--caramel);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.product-details h3 {
+    margin-bottom: 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.product-details > p:not(.product-category) {
+    min-height: 84px;
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+/* PRICE AND ORDER BUTTON */
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.price {
+    color: var(--brown);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.product-bottom .btn {
+    width: auto;
+    padding: 12px 18px;
+    font-size: 0.88rem;
+}
+
+/* CLOSING BANNER */
+
+.muffins-cta {
+    margin: 0 6% 85px;
+    padding: 65px 25px;
+    border-radius: 16px;
+    background: var(--brown);
+    color: var(--white);
+    text-align: center;
+}
+
+.muffins-cta .eyebrow {
+    color: #e6bd9c;
+}
+
+.muffins-cta h2 {
+    max-width: 720px;
+    margin: 0 auto 20px;
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+}
+
+.muffins-cta > p:not(.eyebrow) {
+    max-width: 550px;
+    margin: 0 auto 28px;
+    color: #eadbd1;
+    line-height: 1.9;
+}
+
+.muffins-cta .btn {
+    width: auto;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+    .muffins-products {
+        gap: 22px;
+    }
+
+    .product-image {
+        height: 270px;
+    }
+
+    .product-details {
+        padding: 22px;
+    }
+
+    .product-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-details > p:not(.product-category) {
+        min-height: 110px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .muffins-hero {
+        padding: 60px 6% 65px;
+    }
+
+    .muffins-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .muffin-collection {
+        padding: 60px 5% 70px;
+    }
+
+    .muffins-heading {
+        margin-bottom: 35px;
+    }
+
+    .muffins-products {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+    .product-details {
+        padding: 25px;
+    }
+
+    .product-details > p:not(.product-category) {
+        min-height: 0;
+    }
+
+    .product-bottom .btn {
+        width: auto;
+    }
+
+    .muffins-cta {
+        margin: 0 5% 60px;
+        padding: 48px 22px;
+    }
+}
+
+@media (max-width: 360px) {
+    .product-bottom {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .product-bottom .btn {
+        width: 100%;
+    }
+}

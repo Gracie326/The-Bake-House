@@ -1,0 +1,536 @@
+/* ========================================
+   BAKE HOUSE — HOMEPAGE STYLES
+======================================== */
+
+
+/* 1. HERO SECTION */
+
+.hero {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 85px 8% 95px;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 70px;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 560px;
+}
+
+.hero-content .eyebrow {
+    margin-bottom: 24px;
+}
+
+.hero-content h1 {
+    max-width: 560px;
+    margin-bottom: 25px;
+    color: var(--brown);
+}
+
+.hero-content h1 span {
+    display: inline-block;
+    color: var(--caramel);
+}
+
+.hero-description {
+    max-width: 490px;
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 27px;
+}
+
+.hero-buttons .btn {
+    width: auto;
+}
+
+.location-note {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
+
+/* 2. HERO IMAGE */
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    max-width: 510px;
+    justify-self: end;
+    padding-bottom: 25px;
+}
+
+.hero-image > img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 48% 48% 12px 12px;
+    background-color: var(--light-brown);
+    box-shadow: var(--shadow);
+}
+
+.image-note {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: min(285px, 80%);
+    padding: 21px 25px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.image-note span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--caramel);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.image-note p {
+    margin: 0;
+    color: var(--brown);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+
+/* 3. WELCOME SECTION */
+
+.welcome-section {
+    padding: 100px 8%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.welcome-section .eyebrow {
+    margin-bottom: 20px;
+}
+
+.welcome-section h2 {
+    max-width: 700px;
+    margin: 0 auto 22px;
+}
+
+.welcome-section > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 24px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.welcome-section .text-link {
+    margin-top: 3px;
+}
+
+
+/* 4. FEATURED MUFFINS SECTION */
+
+.featured-section {
+    padding: 100px 8%;
+    background-color: var(--cream);
+}
+
+.featured-section .section-heading {
+    margin-bottom: 50px;
+}
+
+.featured-section .section-heading h2 {
+    margin-bottom: 17px;
+}
+
+.muffin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* 5. MUFFIN CARDS */
+
+.muffin-card {
+    min-width: 0;
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.muffin-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.muffin-card > img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    background-color: var(--light-brown);
+    transition: transform 0.5s ease;
+}
+
+.muffin-card:hover > img {
+    transform: scale(1.025);
+}
+
+.muffin-card-content {
+    padding: 30px;
+}
+
+.flavour-label {
+    margin-bottom: 12px;
+    color: var(--caramel);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.muffin-card-content h3 {
+    margin-bottom: 14px;
+    font-size: 1.5rem;
+}
+
+.muffin-card-content > p:not(.flavour-label) {
+    margin-bottom: 21px;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 0.94rem;
+}
+
+
+/* 6. VIEW ALL BUTTON */
+
+.section-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.section-button .btn {
+    width: auto;
+}
+
+
+/* 7. ORDER BANNER */
+
+.order-banner {
+    width: 84%;
+    max-width: 1120px;
+    margin: 0 auto 100px;
+    padding: 60px 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    background-color: var(--brown);
+    border-radius: 16px;
+    color: var(--white);
+}
+
+.order-banner-content {
+    max-width: 650px;
+}
+
+.order-banner .eyebrow {
+    color: #DDB08D;
+    margin-bottom: 18px;
+}
+
+.order-banner h2 {
+    margin-bottom: 18px;
+    color: var(--white);
+    font-size: clamp(1.9rem, 3vw, 2.65rem);
+    line-height: 1.25;
+}
+
+.order-banner-content > p:last-child {
+    max-width: 570px;
+    margin-bottom: 0;
+    color: #E5D6CD;
+    line-height: 1.8;
+}
+
+.order-banner > .btn {
+    flex-shrink: 0;
+    width: auto;
+    white-space: nowrap;
+}
+
+
+/* 8. TABLET RESPONSIVENESS */
+
+@media (max-width: 1050px) {
+
+    .hero {
+        padding: 70px 6% 80px;
+        gap: 40px;
+    }
+
+    .hero-image > img {
+        height: 440px;
+    }
+
+    .hero-description {
+        font-size: 0.96rem;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        padding: 13px 17px;
+    }
+
+    .welcome-section,
+    .featured-section {
+        padding: 80px 6%;
+    }
+
+    .muffin-card > img {
+        height: 270px;
+    }
+
+    .order-banner {
+        width: 88%;
+        padding: 45px;
+        gap: 25px;
+    }
+}
+
+
+/* 9. MOBILE RESPONSIVENESS */
+
+@media (max-width: 760px) {
+
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+        padding: 60px 6% 75px;
+    }
+
+    .hero-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        max-width: 500px;
+    }
+
+    .hero-description {
+        max-width: 550px;
+    }
+
+    .hero-image {
+        justify-self: center;
+        width: 100%;
+        max-width: 520px;
+        padding-right: 10px;
+    }
+
+    .hero-image > img {
+        height: 440px;
+    }
+
+    .image-note {
+        right: 0;
+    }
+
+    .welcome-section,
+    .featured-section {
+        padding: 75px 6%;
+    }
+
+    .muffin-grid {
+        gap: 22px;
+    }
+
+    .muffin-card > img {
+        height: 230px;
+    }
+
+    .muffin-card-content {
+        padding: 22px;
+    }
+
+    .muffin-card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .order-banner {
+        width: 88%;
+        margin-bottom: 75px;
+        padding: 40px 32px;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-banner > .btn {
+        width: 100%;
+        white-space: normal;
+    }
+
+}
+
+
+/* 10. SMALL PHONE SCREENS */
+
+@media (max-width: 520px) {
+
+    .hero {
+        padding: 48px 6% 65px;
+        gap: 35px;
+    }
+
+    .hero-content .eyebrow {
+        font-size: 0.69rem;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.6rem, 12vw, 3.5rem);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 0.94rem;
+        line-height: 1.85;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .location-note {
+        font-size: 0.78rem;
+    }
+
+    .hero-image > img {
+        height: 360px;
+        border-radius: 45% 45% 10px 10px;
+    }
+
+    .image-note {
+        width: min(260px, 85%);
+        padding: 17px 19px;
+    }
+
+    .welcome-section,
+    .featured-section {
+        padding: 65px 6%;
+    }
+
+    .welcome-section h2,
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .welcome-section > p:not(.eyebrow),
+    .section-heading > p:last-child {
+        font-size: 0.93rem;
+    }
+
+    .muffin-grid {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 420px;
+        margin-inline: auto;
+        gap: 25px;
+    }
+
+    .muffin-card > img {
+        height: 270px;
+    }
+
+    .muffin-card-content {
+        padding: 25px;
+    }
+
+    .section-button {
+        margin-top: 35px;
+    }
+
+    .section-button .btn {
+        width: 100%;
+    }
+
+    .order-banner {
+        width: 88%;
+        padding: 32px 24px;
+        margin-bottom: 65px;
+    }
+
+    .order-banner h2 {
+        font-size: 1.9rem;
+    }
+
+    .order-banner-content > p:last-child {
+        font-size: 0.93rem;
+    }
+
+}
+
+
+/* 11. VERY SMALL PHONES */
+
+@media (max-width: 360px) {
+
+    .hero-content h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-image > img {
+        height: 300px;
+    }
+
+    .muffin-card > img {
+        height: 220px;
+    }
+
+    .order-banner {
+        padding: 27px 20px;
+    }
+
+}
